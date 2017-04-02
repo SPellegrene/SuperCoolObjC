@@ -10,6 +10,10 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UIImageView *bgImage;
+@property (weak, nonatomic) IBOutlet UIImageView *boomImage;
+@property (weak, nonatomic) IBOutlet UIImageView *coolButton;
+
 @end
 
 @implementation ViewController
@@ -23,6 +27,14 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)coolButtonPressed:(id)sender {
+    
+    self.bgImage.hidden = false;
+    self.boomImage.hidden = false;
+    self.coolButton.hidden = true;
+    
 }
 
 
